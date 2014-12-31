@@ -3,7 +3,11 @@ require 'sinatra/base'
 class FakeUsdaApi < Sinatra::Base
 
   get '/farmersmarkets/v1/data.svc/zipSearch' do
-    json_response 200, 'zip_search.json'
+    if params[:zip].to_s == '0'
+      json_response 200, 'zip_search_empty.json'
+    else
+      json_response 200, 'zip_search.json'
+    end
   end
 
 private

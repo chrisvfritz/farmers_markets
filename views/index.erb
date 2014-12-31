@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Farmers Markets near MSU</title>
-    <meta name="description" content="Lists farmers markets near MSU">
+    <title>Farmers Markets near <%= current_zip %></title>
+    <meta name="description" content="Lists farmers markets near <%= current_zip %>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico in the root directory -->
@@ -19,9 +19,15 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
 
-      <h1>Markets near MSU</h1>
-
-      <% markets = markets_near_zip(48823) %>
+      <h1>
+        Markets near
+        <form action="/" class="form-inline visible-lg-inline-block visible-md-inline-block visible-sm-inline-block visible-xs-block">
+          <div class="form-group">
+            <input name="zip" type="integer" value="<%= current_zip %>" class="form-control input-lg">
+          </div>
+          <input type="submit" value="Search" class="btn btn-primary btn-lg">
+        </form>
+      </h1>
 
       <% if markets.any? %>
         <table class="table table-striped">
