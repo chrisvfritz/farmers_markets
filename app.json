@@ -1,0 +1,12 @@
+{
+  "name": "Farmers Markets Sinatra App",
+  "description": "Lists farmers markets near US zip codes",
+  "keywords": [
+    "health",
+    "food",
+    "local"
+  ],
+  "website": "http://tc359-farmers-markets.herokuapp.com/",
+  "repository": "https://github.com/chrisvfritz/farmers_markets",
+  "success_url": "/"
+}
