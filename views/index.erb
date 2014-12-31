@@ -21,7 +21,7 @@
 
       <h1>Markets near MSU</h1>
 
-      <% markets = markets_near(48823) %>
+      <% markets = markets_near_zip(48823) %>
 
       <% if markets.any? %>
         <table class="table table-striped">
@@ -34,7 +34,7 @@
           <tbody>
             <% markets.each do |market| %>
               <tr>
-                <td><%= market.distance %></td>
+                <td><%= market.miles %></td>
                 <td class="full"><%= market.name %></td>
               </tr>
             <% end %>
