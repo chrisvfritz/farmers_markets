@@ -12,4 +12,5 @@ module FarmersMarketsApiHelper
   def current_zip
     @current_zip ||= ZipCode.new(params[:zip]).zip
   end
+
 end
