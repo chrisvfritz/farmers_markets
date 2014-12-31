@@ -16,7 +16,12 @@ require_relative 'support/fake_usda_api'
 FarmersMarketsApp.environment = :test
 Bundler.require :default, FarmersMarketsApp.environment
 
-WebMock.disable_net_connect!(allow_localhost: true)
+WebMock.disable_net_connect!(
+  allow_localhost: true,
+  allow: [
+    /codeclimate.com/
+  ]
+)
 
 RSpec.configure do |config|
   config.before(:each) do
