@@ -1,60 +1,30 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Farmers Markets near <%= current_zip %></title>
-    <meta name="description" content="Lists farmers markets near <%= current_zip %>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Place favicon.ico in the root directory -->
-
-    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/vendor/modernizr.min.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-      <![endif]-->
-
-      <h1>
-        Markets near
-        <form action="/" class="form-inline visible-lg-inline-block visible-md-inline-block visible-sm-inline-block visible-xs-block">
-          <div class="form-group">
-            <input name="zip" type="integer" value="<%= current_zip %>" class="form-control input-lg">
-          </div>
-          <input type="submit" value="Search" class="btn btn-primary btn-lg">
-        </form>
-      </h1>
-
-      <% if markets.any? %>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Miles</th>
-              <th>Name</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% markets.each do |market| %>
-              <tr>
-                <td><%= market.miles %></td>
-                <td class="full"><%= market.name %></td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-      <% else %>
-        <p>Sorry, no markets were found.</p>
-      <% end %>
+<h1>
+  Markets near
+  <form action="/" class="form-inline visible-lg-inline-block visible-md-inline-block visible-sm-inline-block visible-xs-block">
+    <div class="form-group">
+      <input name="zip" type="integer" value="<%= current_zip %>" class="form-control input-lg">
     </div>
+    <input type="submit" value="Search" class="btn btn-primary btn-lg">
+  </form>
+</h1>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-  </body>
-</html>
+<% if markets.any? %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Miles</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% markets.each do |market| %>
+        <tr>
+          <td><%= market.miles %></td>
+          <td class="full"><%= market.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>Sorry, no markets were found.</p>
+<% end %>
