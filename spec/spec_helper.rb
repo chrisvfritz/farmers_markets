@@ -8,8 +8,8 @@ require_relative '../app'
 
 require_relative 'support/fake_usda_api'
 
-FarmersMarketApp.environment = :test
-Bundler.require :default, FarmersMarketApp.environment
+FarmersMarketsApp.environment = :test
+Bundler.require :default, FarmersMarketsApp.environment
 
 WebMock.disable_net_connect!(allow_localhost: true)
 
@@ -19,4 +19,4 @@ RSpec.configure do |config|
   end
 end
 
-Capybara.app = FarmersMarketApp
+Capybara.app = FarmersMarketsApp
