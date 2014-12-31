@@ -7,6 +7,12 @@ This is a simple, example Sinatra app that connects to the USDA's API for farmer
 ## Run locally
 
 ``` bash
+git clone https://github.com/chrisvfritz/farmers_markets.git
+cd farmers_markets
+```
+
+``` bash
+# If you don't have Ruby 2.2.0 installed
 rbenv install 2.2.0 # for rbenv
 # OR
 rvm install ruby-2.2.0 # for rvm
