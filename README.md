@@ -27,7 +27,7 @@ rackup
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/chrisvfritz/farmers_markets)
 
-OR
+OR, if you already have the app running locally:
 
 ``` bash
 heroku create name-of-my-farmers-markets-app
