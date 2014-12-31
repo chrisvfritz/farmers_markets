@@ -1,0 +1,22 @@
+language: ruby
+rvm:
+  - 2.2.0
+
+addons:
+  code_climate:
+    repo_token:
+      secure: "dp5ybSCl8O4Js6VLCfYEID2PabgVmDOQebdaNhYIC4pwxLCReTRfebYdRWnTX0iMI+4YQydkNSFY9vEPW2+FKzmi5j1+ddBsemsNNPPEm8RaxRXtaXQZGGTByBhgEK3QZ3DSE/SfF+rGD11qh/9dMI5vHBUe94yOIhhpZwv4sNY="
+
+bundler_args: --without development production
+
+script:
+  - bundle exec rspec
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: "OUO0bGpHUipXpjIOL45hqo2vm3PcZQQP4wkOq0BJO40SPJnCAaxFk73lpuLrgnjwuNjXMZnVS7HegOBKYuIOPIbY8v1v45JPKrcAV9K9gO2XrwHQPCBvQvjYKinw4AHm7t7JLCqiBAUoHWpzcZw2s7q9PNvq5EpZ68dgICNWVQU="
+  app:
+    master: tc359-farmers-markets
+  on:
+    repo: chrisvfritz/farmers_markets

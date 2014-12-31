@@ -1,5 +1,7 @@
 # Farmers Markets App
 
+[![Build Status](https://travis-ci.org/chrisvfritz/farmers_markets.svg)](https://travis-ci.org/chrisvfritz/farmers_markets) [![Code Climate](https://codeclimate.com/github/chrisvfritz/farmers_markets/badges/gpa.svg)](https://codeclimate.com/github/chrisvfritz/farmers_markets) [![Test Coverage](https://codeclimate.com/github/chrisvfritz/farmers_markets/badges/coverage.svg)](https://codeclimate.com/github/chrisvfritz/farmers_markets) [![Dependency Status](https://gemnasium.com/chrisvfritz/farmers_markets.svg)](https://gemnasium.com/chrisvfritz/farmers_markets)
+
 This is a simple, example Sinatra app that connects to the USDA's API for farmers markets. It is meant to be well-organized, well-tested and anything else a good Sinatra app should be. It's under the MIT license, so students or instructors can take it and adapt it as they wish.
 
 ## Run locally
